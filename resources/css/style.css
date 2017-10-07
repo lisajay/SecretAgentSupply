@@ -3,13 +3,20 @@
 html {
   font-family: Helvetica, sans-serif;
   font-size: 18px;
-  color: AquaMarine;
+  color: white;
 }
 
 .container {
   display: flex;
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.company {
+  display: flex;
   width: 960px;
   margin: 0 auto;
+  align-items: center;
 }
 
 h1 {
@@ -25,19 +32,21 @@ header {
   align-items: center;
 }
 
-.logo {
+.container .logo {
   display: flex;
   align-items: center;
+  paddinf: 12px 0 12px 0.5em;
 }
 
 header img {
   height: 1.5rem;
+  margin-left: 0.5rem;
+  margin-right: 1rem;
 }
 
 header h4 {
   padding: 0.66rem;
 }
-
 
 .banner {
   background-image: url("../images/moto.jpeg");
@@ -53,7 +62,7 @@ header h4 {
 }
 
 .banner-box h1 {
-
+  margin: 0.25rem 0;
 }
 
 .nav-bar {
@@ -63,10 +72,142 @@ header h4 {
 }
 
 .nav {
-  display:flex;
+  flex-basis: 960px;
   justify-content: space-between;
 }
 
-.nav span {
-  margin: 0.75rem;
+.mobile-nav {
+  display:none;
+  justify-content: center;
+}
+
+.nav span, .mobile-nav span {
+  margin: 0.75rem 0;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.item {
+  width: 30%;
+  display: block;
+}
+
+.item-image {
+  border: 4px solid black;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 2rem 0;
+  height: 9rem;
+}
+
+.item-image img {
+  max-width: 8em;
+}
+
+.item span {
+  background-color: black;
+  text-align: center;
+  display: block;
+  padding: 0.5rem;
+}
+
+.titles {
+  justify-content: space-between;
+  margin-top: 3rem;
+  margin-bottom: 4rem;
+}
+
+.title-item {
+    width: 35%;
+    color: black;
+}
+
+.title-block {
+  background-color: black;
+  padding: 1rem 0 1rem 2rem;
+  color: white;
+}
+
+footer {
+  background-color: black;
+  height: 5rem;
+  display: flex;
+  align-items: center;
+}
+
+.copyright {
+  display: flex;
+  align-items: center;
+}
+
+@media only screen and (max-width: 1024px) {
+
+  .nav {
+    display: none;
+  }
+
+  .mobile-nav {
+    display: flex;
+  }
+
+  .item {
+    width: 47%;
+  }
+
+  .glasses {
+    display: none;
+  }
+
+  h1 {
+    font-size: 1.5rem;
+  }
+}
+
+@media only screen and (max-width: 470px) {
+
+  .banner {
+    display: flex;
+    align-items: flex-end;
+  }
+
+  .banner-box {
+    background-color: black;
+    width: 100%;
+    padding: 2rem 3rem;
+  }
+
+  .banner-box span {
+    font-size: 0.75rem;
+  }
+
+  h1 {
+    font-size: 1rem;
+  }
+
+  h4 {
+    font-size: 0.75rem;
+  }
+
+  .watch {
+    display: none;
+  }
+
+  .item {
+    width: 90%;
+    margin: auto;
+  }
+
+  .titles {
+    flex-direction: column;
+  }
+
+  .title-item {
+      width: 90%;
+      margin: 0.5rem auto;
+  }
 }
